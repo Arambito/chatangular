@@ -1,7 +1,7 @@
 <div class="wrapper">
   <section class="form login">
     <header>ChatForFreeWithout <i class="fas fa-solid fa-poop"></i></header>
-    <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+    <form  (ngSubmit)="login()" [formGroup]="form">
       <div class="error-text"></div>
       <div class="field input">
         <label>Correo Electronico</label>
@@ -13,7 +13,11 @@
         <i class="fas fa-eye"></i>
       </div>
       <div class="field button">
-        <input type="submit" name="submit" value="Ingresar">
+         <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                    Ingresar
+          </button>
+        <!-- <input type="submit" name="submit" value="Ingresar"> -->
       </div>
     </form>
     <div class="link">¿Aún no te registras? <a routerLink="registro">Registrate ahora</a></div>

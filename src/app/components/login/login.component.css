@@ -53,7 +53,7 @@
 .form form .image input{
   font-size: 17px;
 }
-.form form .button input{
+.form form .button button{
   height: 45px;
   border: none;
   color: #fff;
